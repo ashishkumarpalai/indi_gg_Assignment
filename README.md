@@ -69,3 +69,8 @@ Before you begin, ensure you have met the following requirements:
       MONGODB_URI=Your mongodb url
       JWT_SECRET=your-secret-key
   ```
+4. Start the server:
+
+   ```shell
+   npm run server
+   ```
