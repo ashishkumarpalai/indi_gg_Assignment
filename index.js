@@ -12,14 +12,14 @@ const{loggerMiddleware}=require("./middleware/logging.middleware")
 // swagger
 const swaggerUi = require("swagger-ui-express");
 const {swaggerSpec} = require("./routes/swagger");
-
+const cors=require("cors")
 
 
 // Create an Express application
 const app = express()
 
 app.use(express.json())
-
+app.use(cors())
 
 // Apply the logger middleware to log requests
 // app.use(loggerMiddleware);
@@ -31,7 +31,7 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 // Define a basic route for the root endpoint
 app.get("/",limiter, async (req, res) => {
-    res.send("wellcome to managing books in a library backend")
+    res.send(`<h1 style="text-align: center; color: blue;">wellcome to managing books in a library backend"</h1>`)
     console.log("Wellcome managing books in a library backend app")
 })
 
