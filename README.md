@@ -6,15 +6,11 @@ The Book Management System API is a RESTful API for managing books and user acco
 
 ## Deployed Link
 
-```bash
-   https://indi-gg-assignment.onrender.com
-```
+https://indi-gg-assignment.onrender.com
 
 ##  Swagger Documentation
+https://indi-gg-assignment.onrender.com/api-docs
 
-```bash
- https://indi-gg-assignment.onrender.com/api-docs
-```
 ![Screenshot (714)](https://github.com/ashishkumarpalai/indi_gg_Assignment/assets/112760336/c7275f32-ecc5-4766-a787-3d821b1b6221)
 
 
