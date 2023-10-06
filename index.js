@@ -9,13 +9,25 @@ const {authenticate}=require("./middleware/auth.middleware")
 const{limiter}=require("./middleware/ratelimiter.middleware")
 const{loggerMiddleware}=require("./middleware/logging.middleware")
 
+// swagger
+const swaggerUi = require("swagger-ui-express");
+const {swaggerSpec} = require("./routes/swagger");
+
+
+
 // Create an Express application
 const app = express()
 
 app.use(express.json())
 
+
 // Apply the logger middleware to log requests
-app.use(loggerMiddleware);
+// app.use(loggerMiddleware);
+
+
+// Serve Swagger documentation
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+
 
 // Define a basic route for the root endpoint
 app.get("/",limiter, async (req, res) => {
